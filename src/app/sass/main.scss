@@ -1,0 +1,37 @@
+// Force encoding
+@charset "UTF-8";
+
+// Based on the 7-1 pattern https://sass-guidelin.es/#the-7-1-pattern
+// 1 - Abstracts
+@import
+  "abstracts/variables",
+  "abstracts/colors",
+  "abstracts/placeholders",
+  "abstracts/mixins",
+  "abstracts/functions";
+
+// 2 - Base
+@import
+  "base/reset",
+  "base/typography",
+  "base/fonts",
+  "base/helpers",
+  "base/animations";
+
+// 3 - Vendors
+@import
+  "vendors/sanitize";
+
+// 4 - Partials
+@import
+  "partials/header",
+  "partials/footer";
+
+// 5 - Components
+@import "components/buttons";
+
+// 6 - Pages
+@import "pages/home";
+
+// Shame
+@import "shame";

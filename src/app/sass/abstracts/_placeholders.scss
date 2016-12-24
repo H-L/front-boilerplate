@@ -1,0 +1,26 @@
+/// Example
+%message {
+    padding: 0.5em;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    font-weight: bold;
+}
+
+.message-error {
+    @extend %message;
+    color: red;
+}
+
+.message-valid {
+    @extend %message;
+    color: green;
+}
+
+.message-warning {
+    @extend %message;
+    color: orange;
+}
+
+.message-info {
+    @extend %message;
+    color: blue;
+}
