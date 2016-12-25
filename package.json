@@ -21,7 +21,9 @@
     "gulp-sourcemaps": "^1.9.1",
     "gulp-uglify": "^2.0.0",
     "gulp-util": "^3.0.7",
+    "normalize.css": "^5.0.0",
     "postcss-import": "^9.0.0",
+    "reset-css": "^2.2.0",
     "sanitize.css": "^4.1.0"
   }
 }

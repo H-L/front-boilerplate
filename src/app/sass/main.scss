@@ -1,7 +1,9 @@
 // Force encoding
 @charset "UTF-8";
 
-// Based on the 7-1 pattern https://sass-guidelin.es/#the-7-1-pattern
+/**
+* Based on the 7-1 pattern https://sass-guidelin.es/#the-7-1-pattern
+*  =========================================================================== */
 // 1 - Abstracts
 @import
   "abstracts/variables",
@@ -10,7 +12,15 @@
   "abstracts/mixins",
   "abstracts/functions";
 
-// 2 - Base
+/**
+* 2 - Base
+* Containing the basics stuff :
+*   - Resets
+*   - Typographys
+*   - Fonts
+*   - Helpers
+*   - Animations
+*  =========================================================================== */
 @import
   "base/reset",
   "base/typography",
@@ -18,20 +28,32 @@
   "base/helpers",
   "base/animations";
 
-// 3 - Vendors
+/**
+* 3 - Vendors
+*  =========================================================================== */
 @import
-  "vendors/sanitize";
+  "vendors/sanitize",
+  "vendors/normalize";
+  // "vendors/reset-css";
 
-// 4 - Partials
+  /**
+* 4 - Partials
+*  =========================================================================== */
 @import
   "partials/header",
   "partials/footer";
 
-// 5 - Components
+  /**
+* 5 - Components
+*  =========================================================================== */
 @import "components/buttons";
 
-// 6 - Pages
+/**
+* 6 - Pages
+*  =========================================================================== */
 @import "pages/home";
 
-// Shame
+/**
+* Shame
+*  =========================================================================== */
 @import "shame";
