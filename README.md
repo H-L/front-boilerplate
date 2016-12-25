@@ -37,4 +37,10 @@ It actually tries to follow the [7-1 pattern](https://sass-guidelin.es/#the-7-1-
 
 ## Sanitize.css
 As you would see, this repo uses both [Sanitize.css](https://github.com/jonathantneal/sanitize.css/) and [Normalize.css](https://necolas.github.io/normalize.css/).
-Feel free to change the ```@import "sanitize.css";``` and/or ```@import "normalize.css";``` by any other reset such as  or [Reset.css](http://meyerweb.com/eric/tools/css/reset/) (wich is also included in the packages and in the ```sass/vendors``` repo for now).
+Feel free to change the
+```@import "sanitize.css";
+```
+and/or
+```@import "normalize.css";
+``` 
+by any other reset such as [Reset.css](http://meyerweb.com/eric/tools/css/reset/) (wich is also included in the packages and in the ```sass/vendors``` repo for now).
