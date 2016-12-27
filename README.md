@@ -9,6 +9,7 @@ This repo is containning all the stuff I use or will use soon on my projects.
 ```bash
 git clone git@github.com:H-L/gulp-dir.git
 yarn install
+gulp build
 ```
 # Folder structure
 
@@ -35,17 +36,12 @@ If you want to learn Sass, here are some useful links :
 
 It actually tries to follow the [7-1 pattern](https://sass-guidelin.es/#the-7-1-pattern) and have already some helpers added.
 
-## Sanitize.css
+## Normalize.css and Sanitize.css
 As you would see, this repo uses both [Sanitize.css](https://github.com/jonathantneal/sanitize.css/) and [Normalize.css](https://necolas.github.io/normalize.css/).
-Feel free to change the
+They are installed as dependencies in node_modules and imported in the sass file with [postcss-import](https://github.com/postcss/postcss-import)
+If you prefer not to use them, simply comment or delete the ```@import``` lines in the ```sass/vendors``` by any other reset such as [Reset.css](http://meyerweb.com/eric/tools/css/reset/) (wich is also included in the packages and in the ```sass/vendors``` repo for now).
 
-```css
-@import "sanitize.css";
-```
+# Babel for ES6
+ES6 is supported by using ```gulp-babel```. Useful links on ES6 :
 
-and/or
-
-```css
-@import "normalize.css";
-```
-by any other reset such as [Reset.css](http://meyerweb.com/eric/tools/css/reset/) (wich is also included in the packages and in the ```sass/vendors``` repo for now).
+* [Babel.js](http://babeljs.io/)
