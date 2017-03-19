@@ -1,6 +1,5 @@
 # Added ignore
 app/dist/
-app/img/original/
 
 # Created by https://www.gitignore.io/api/macos,node
 
