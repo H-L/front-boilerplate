@@ -6,9 +6,12 @@ require('require-dir')('./gulp.tasks');
 
 gulp.task('watch', ['scripts', 'sass'],function () { 
   
-  browserSync.init({
-    server: "./app"
-  });
+  browserSync.init([
+    './app/dist/css/**/*.css',
+    './app/dist/js/**/*.js',
+    './app/index.html'
+  ], 
+  { server: './app' });
   
   gulp.watch('app/scss/**/*.{sass,scss}', ['sass']);
   gulp.watch('app/js/**/*.js', ['scripts']);
