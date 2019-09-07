@@ -1,0 +1,9 @@
+{
+  "themeDir": "./",
+  "styles": {
+      "srcMain": "./test/assets/scss/main.scss",
+      "srcAll": "./test/assets/scss/**/*.scss",
+      "concat": "main.css",
+      "dist": "./test/dist/css"
+  }
+}

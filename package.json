@@ -1,0 +1,46 @@
+{
+  "name": "gulp-boilerplate",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "@babel/core": "^7.6.0",
+    "@babel/preset-env": "^7.6.0",
+    "autoprefixer": "^9.6.1",
+    "babel-polyfill": "^6.26.0",
+    "gulp": "^4.0.2",
+    "gulp-babel": "^8.0.0",
+    "gulp-clean-css": "^4.2.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-livereload": "^4.0.1",
+    "gulp-plumber": "^1.2.1",
+    "gulp-postcss": "^8.0.0",
+    "gulp-purge-sourcemaps": "^1.0.0",
+    "gulp-replace": "^1.0.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-sass-glob": "^1.1.0",
+    "gulp-uglify": "^3.0.2",
+    "node-sass-tilde-importer": "^1.0.2",
+    "postcss-object-fit-images": "^1.1.2"
+  },
+  "devDependencies": {
+    "bootstrap": "^4.3.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://gitlab.com/hadrien.lepoutre/gulp-boilerplate.git"
+  },
+  "keywords": [
+    "gulp",
+    "front-end"
+  ],
+  "author": "Hadrien Lepoutre",
+  "license": "BSD-2-Clause",
+  "bugs": {
+    "url": "https://gitlab.com/hadrien.lepoutre/gulp-boilerplate/issues"
+  },
+  "homepage": "https://gitlab.com/hadrien.lepoutre/gulp-boilerplate#readme"
+}
