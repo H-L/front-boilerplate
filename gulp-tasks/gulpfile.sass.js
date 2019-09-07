@@ -12,16 +12,12 @@ let livereload = require('gulp-livereload');
 let tildeImporter = require('node-sass-tilde-importer');
 
 // Config vars
-let srcAll = config.themeDir + config.styles.srcAll;
-let srcMain = config.themeDir + config.styles.srcMain;
-let destination = config.themeDir + config.styles.dist;
+let source = config.styles.src;
+let destination = config.styles.dist;
 
 // Methods
 const task_sass = done => {
-  src(srcMain, {
-      sourcemaps: true, 
-      since: lastRun(task_sass),
-    })
+  src(source, {sourcemaps: true})
     .pipe(plumber())
     .pipe(sassGlob())
     .pipe(
@@ -37,13 +33,13 @@ const task_sass = done => {
     ]))
     .pipe(cleanCss())
     .pipe(concat(config.styles.concat))
-    .pipe(dest(destination, {sourcemaps: '.'}))
+    .pipe(dest(destination, {sourcemaps: true}))
     .pipe(livereload());
   done();
 };
 
 const build_sass = done => {
-  src(srcMain)
+  src(source)
     .pipe(plumber())
     .pipe(sassGlob())
     .pipe(

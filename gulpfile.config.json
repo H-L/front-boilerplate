@@ -1,9 +1,19 @@
 {
-  "themeDir": "./",
   "styles": {
-      "srcMain": "./test/assets/scss/main.scss",
       "srcAll": "./test/assets/scss/**/*.scss",
+      "src": "./test/assets/scss/main.scss",
       "concat": "main.css",
       "dist": "./test/dist/css"
+  },
+  "scripts": {
+    "src": "./test/assets/js/**/*.js",
+    "concat": "main.js",
+    "dist": "./test/dist/js/.",
+    "babelPreset": {
+      "presets": ["@babel/env"]
+    },
+    "polyfill": [
+      "./node_modules/babel-polyfill/dist/polyfill.js"
+    ]
   }
 }
