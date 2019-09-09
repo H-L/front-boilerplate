@@ -1,19 +1,35 @@
 {
+  "babelPreset": {
+    "presets": ["@babel/env"]
+  },
   "styles": {
       "srcAll": "./test/assets/scss/**/*.scss",
       "src": "./test/assets/scss/main.scss",
       "concat": "main.css",
       "dist": "./test/dist/css"
   },
-  "scripts": {
-    "src": "./test/assets/js/**/*.js",
-    "concat": "main.js",
-    "dist": "./test/dist/js/.",
-    "babelPreset": {
-      "presets": ["@babel/env"]
+  "scripts": [
+    {
+      "src": [
+        "./test/assets/js/custom/*.js",
+        "./node_modules/babel-polyfill/dist/polyfill.js"
+      ],
+      "dist": "./test/dist/js/custom/.",
+      "concat": "main.js"
     },
-    "polyfill": [
-      "./node_modules/babel-polyfill/dist/polyfill.js"
-    ]
-  }
+    {
+      "src": "./test/assets/js/contrib/*.js",
+      "dist": "./test/dist/js/contrib/."
+    }
+  ],
+  "static_assets": [
+    {  
+      "src": "./test/assets/fonts/**/*",
+      "dest": "./test/dist/fonts/"
+    },
+    {
+      "src": "./test/assets/icons/**/*",
+      "dest": "./test/dist/icons/"
+    }
+  ]
 }

@@ -1,36 +1,61 @@
-const {src, watch, task, series, dest} = require('gulp');
+const {src, dest} = require('gulp');
 let config = require('../gulpfile.config.json');
 
 let concat = require('gulp-concat');
 let uglify = require('gulp-uglify');
 let plumber = require('gulp-plumber');
 let babel = require('gulp-babel');
-let livereload = require('gulp-livereload');
+let gulpif = require('gulp-if');
 
-let source = config.scripts.src;
-let destination = config.scripts.dist;
-let presets = config.scripts.babelPreset;
-let polyfill = config.scripts.polyfill;
-polyfill ? source = [source, ...polyfill] : null;
+let scripts = config.scripts;
+let presets = config.babelPreset;
 
 const task_js = done => {
-  src(source, {sourcemaps: true})
-    .pipe(plumber())
-    .pipe(babel(presets))
-    .pipe(uglify())
-    .pipe(concat(config.scripts.concat))
-    .pipe(dest(destination, {sourcemaps: true}))
-  done();
+  scripts.forEach(script => {
+    let source = script.src;
+    let destination = script.dist;
+
+    // Set up concat variables
+    let concat_bool = false;
+    let concat_settings = script.concat;
+    // If concat_settings is falsy, concat() still needs to get a string. I know, it's weird.
+    if(concat_settings){ 
+      concat_bool = true 
+    } else {
+      concat_bool = false
+      concat_settings = "whatever"
+    };
+    
+    src(source, {sourcemaps: true})
+      .pipe(plumber())
+      .pipe(babel(presets))
+      .pipe(uglify())
+      .pipe( gulpif(concat_bool, concat(concat_settings)))
+      .pipe(dest(destination, {sourcemaps: true}))
+    done();
+  });
 };
 
 const build_js = done => {
-  src(source)
-    .pipe(plumber())
-    .pipe(babel(presets))
-    .pipe(uglify())
-    .pipe(concat(config.scripts.concat))
-    .pipe(dest(destination));
-  done();
+  scripts.forEach(script => {
+    let source = script.src;
+    let destination = script.dist;
+
+    // Set up concat variable. 
+    // If concat_settings is falsy, concat() still needs to get a string. I know, it's weird.
+    let concat_bool = false;
+    let concat_settings = script.concat;
+    concat_settings ? concat_bool = true : concat_bool = false;
+    concat_settings.toString();
+
+    src(source, {sourcemaps: true})
+      .pipe(plumber())
+      .pipe(babel(presets))
+      .pipe(uglify())
+      .pipe(gulpif(concat_bool, concat(concat_settings)))
+      .pipe(dest(destination))
+    done();
+  });
 };
 
 module.exports = {
