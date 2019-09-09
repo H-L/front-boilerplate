@@ -1,5 +1,5 @@
 {
-  "name": "@lamp-ic/gulp-boilerplate",
+  "name": "@lamp-ic-hl/gulp-boilerplate",
   "version": "1.0.0",
   "main": "index.js",
   "dependencies": {
