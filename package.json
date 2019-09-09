@@ -1,6 +1,6 @@
 {
   "name": "@lamp-ic-hl/gulp-boilerplate",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "index.js",
   "dependencies": {
     "@babel/core": "^7.6.0",
@@ -31,7 +31,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://gitlab.com/hadrien.lepoutre/gulp-boilerplate.git"
+    "url": "git+https://gitlab.com/lamp-ic/tools/gulp-boilerplate.git"
   },
   "keywords": [
     "gulp",
@@ -40,9 +40,9 @@
   "author": "Hadrien Lepoutre",
   "license": "BSD-2-Clause",
   "bugs": {
-    "url": "https://gitlab.com/hadrien.lepoutre/gulp-boilerplate/issues"
+    "url": "https://gitlab.com/lamp-ic/tools/gulp-boilerplate/issues"
   },
-  "homepage": "https://gitlab.com/hadrien.lepoutre/gulp-boilerplate#readme",
+  "homepage": "https://gitlab.com/lamp-ic/tools/gulp-boilerplate#readme",
   "directories": {
     "test": "test"
   },
