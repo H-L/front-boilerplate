@@ -1,6 +1,6 @@
 {
   "name": "@lamp-ic-hl/gulp-boilerplate",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "main": "index.js",
   "dependencies": {
     "@babel/core": "^7.6.0",
